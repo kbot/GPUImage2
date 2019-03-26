@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A083882224AE51F00AA32FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A083881224AE51F00AA32FF /* OpenGLES.framework */; };
 		BC09239E1C92658200A2ADFA /* ShaderProgram_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */; };
 		BC0923A11C92661D00A2ADFA /* Pipeline_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */; };
 		BC0923A21C92664900A2ADFA /* Framebuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB279EB1C8D11630013E213 /* Framebuffer.swift */; };
@@ -132,7 +133,6 @@
 		BC9673411C8B897100FB64C2 /* FramebufferCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9673401C8B897100FB64C2 /* FramebufferCache.swift */; };
 		BC9673431C8B8A8100FB64C2 /* OpenGLRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9673421C8B8A8100FB64C2 /* OpenGLRendering.swift */; };
 		BC9E34F21E524A2300B8604F /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9E34E91E524A2200B8604F /* GPUImage.framework */; };
-		BC9E35021E524BE200B8604F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9E35011E524BE200B8604F /* OpenGLES.framework */; };
 		BC9E35071E524C5B00B8604F /* OpenGLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E35051E524C5700B8604F /* OpenGLContext.swift */; };
 		BC9E35081E524C5B00B8604F /* OpenGLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E35051E524C5700B8604F /* OpenGLContext.swift */; };
 		BC9E35191E524CF100B8604F /* MovieInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E350C1E524CB900B8604F /* MovieInput.swift */; };
@@ -370,6 +370,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A083881224AE51F00AA32FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram_Tests.swift; path = Tests/ShaderProgram_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipeline_Tests.swift; path = Tests/Pipeline_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC1E12F41C9F2FD7008F844F /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ThreeInput.vsh; path = Source/Operations/Shaders/ThreeInput.vsh; sourceTree = "<group>"; };
@@ -710,7 +711,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9E35021E524BE200B8604F /* OpenGLES.framework in Frameworks */,
+				0A083882224AE51F00AA32FF /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1004,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9E35011E524BE200B8604F /* OpenGLES.framework */,
+				0A083881224AE51F00AA32FF /* OpenGLES.framework */,
 				BC6E7CC91C39ADCC006DF678 /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -1951,7 +1953,7 @@
 				PRODUCT_NAME = GPUImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG GLES";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1980,6 +1982,7 @@
 				PRODUCT_NAME = GPUImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = GLES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
